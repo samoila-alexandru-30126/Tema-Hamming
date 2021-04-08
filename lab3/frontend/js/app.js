@@ -3,13 +3,13 @@ var app = new Vue({
   data: {
     dataBits: [],
     status: "",
-    numberOfDataBits: 4,
+    numberOfDataBits: 8,
   },
   //computed:{
   //  numberOfDataBits: this.numberOfDataBits,
  // },
   created: function () {
-    this.initDataBits(4);
+    this.initDataBits(this.numberOfDataBits);
   },
   methods: {
     initDataBits: function () {
@@ -36,7 +36,7 @@ var app = new Vue({
       
       var c=[];
       var r=1;
-      var nr= this.numberOfDataBits;
+      var nr= parseInt(this.numberOfDataBits);
      
       while(Math.pow(2,r) < parseInt(nr)+parseInt(r)+1)
       {

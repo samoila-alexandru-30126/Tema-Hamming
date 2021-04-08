@@ -6,7 +6,7 @@ api.put("/message", function (request, response) {
 
   console.log(bits)
 
-  var decoded = hamming.decode(distortBit(bits, 7));
+  var decoded = hamming.decode(distortBit(bits, 5));
   if (decoded.errorCorrected) {
     response.json("One error corrected on position: " + decoded.errorPosition);
   }
